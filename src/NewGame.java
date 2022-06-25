@@ -1,20 +1,17 @@
 import javafx.scene.Group;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.Collections;
 
-
 public class NewGame extends Group {
-
-
     public NewGame(){
         Button b = new Button("Go to menu");
 
         b.setLayoutX(0);
         b.setLayoutY(0);
-
 
         b.setOnAction(e->{
             Main.scene.setRoot(new Menu());
@@ -47,6 +44,7 @@ public class NewGame extends Group {
         contTime.start();
 
 
+        Card.cards.clear();
         for (int i = 0; i < 8; i++) {
             Card.cards.add(new Card(i));
             Card.cards.add(new Card(i));
@@ -62,5 +60,13 @@ public class NewGame extends Group {
                 getChildren().add(card);
             }
         }
+    }
+
+    public static void win(){
+        TextInputDialog td = new TextInputDialog("enter your name");
+        td.setHeaderText("! ! !   YOU WON   ! ! !");
+        td.showAndWait();
+        System.out.println(td.getEditor().getText());
+        Main.scene.setRoot(new Menu());
     }
 }
