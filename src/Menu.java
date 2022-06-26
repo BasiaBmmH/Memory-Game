@@ -4,7 +4,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class Menu extends Group{
+public class Menu extends Group {
 
     public Menu() {
         Button b1 = new Button("NewGame");
@@ -41,7 +41,7 @@ public class Menu extends Group{
         text.setText(" Memory Game");
         text.setX(50);
         text.setY(50);
-        text.setFont(Font.font("Verdana",50));
+        text.setFont(Font.font("Verdana", 50));
         text.setFill(Color.AQUAMARINE);
 
         getChildren().add(text);
