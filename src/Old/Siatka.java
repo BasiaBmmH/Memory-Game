@@ -35,13 +35,19 @@ public class Siatka extends Group {
         b1.setOnAction(e -> Main.scene.setRoot(new NewGame(spinner.getValue())));
 
         Button b = new Button("Go to menu");
+        Button c = new Button("Go back to choosing");
 
         b.setLayoutX(0);
         b.setLayoutY(0);
 
+        c.setLayoutX(0);
+        c.setLayoutY(27);
+
         b.setOnAction(e -> Main.scene.setRoot(new Menu()));
+        c.setOnAction(e -> Main.scene.setRoot(new ChooseImage()));
 
         getChildren().add(b);
+        getChildren().add(c);
 
     }
 
