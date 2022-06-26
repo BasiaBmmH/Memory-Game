@@ -29,7 +29,7 @@ public class Menu extends Group{
         });
 
         b2.setOnAction(e -> {
-
+            Main.scene.setRoot(new HighScore());
         });
 
 
