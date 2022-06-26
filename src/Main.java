@@ -16,7 +16,7 @@ public class Main extends Application {
 
         Group root = new Menu();
 
-        stage.setResizable(false);
+       // stage.setResizable(false);
 //        stage.setFullScreen(true);
 //        stage.setFullScreenExitHint("if u want to escape press q");
 //        stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
