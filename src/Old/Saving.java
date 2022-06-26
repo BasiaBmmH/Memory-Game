@@ -35,13 +35,3 @@ public class Saving implements Serializable {
         }
     }
 }
-
-//class Score implements Serializable{
-//    String name;
-//    int score;
-//
-//    public Score(String name, int score) {
-//        this.name = name;
-//        this.score = score;
-//    }
-//}

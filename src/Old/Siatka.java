@@ -14,9 +14,9 @@ public class Siatka extends Group {
 
         Text text = new Text();
         text.setText(" Choose size of the board:");
-        text.setX(22);
+        text.setX(100);
         text.setY(22);
-        text.setFont(Font.font("Verdana",25));
+        text.setFont(Font.font("Verdana", 25));
         text.setFill(Color.AQUAMARINE);
 
         getChildren().add(text);
@@ -29,9 +29,20 @@ public class Siatka extends Group {
         getChildren().add(spinner);
 
         Button b1 = new Button("Accept");
-        b1.setLayoutX(260);
-        b1.setLayoutY(235);
+        b1.setLayoutX(150);
+        b1.setLayoutY(177);
         getChildren().add(b1);
         b1.setOnAction(e -> Main.scene.setRoot(new NewGame(spinner.getValue())));
+
+        Button b = new Button("Go to menu");
+
+        b.setLayoutX(0);
+        b.setLayoutY(0);
+
+        b.setOnAction(e -> Main.scene.setRoot(new Menu()));
+
+        getChildren().add(b);
+
     }
+
 }
