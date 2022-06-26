@@ -2,13 +2,13 @@ package Old;
 
 import javafx.scene.Group;
 import javafx.scene.control.Button;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class ChooseImage extends Group {
+
+    public static int number;
 
     public ChooseImage() {
 
@@ -49,6 +49,7 @@ public class ChooseImage extends Group {
         getChildren().add(b4);
         getChildren().add(b5);
 
+
         b1.setOnAction(e -> Main.scene.setRoot(new Siatka()));
 
         b2.setOnAction(e -> Main.scene.setRoot(new Siatka()));
@@ -58,6 +59,7 @@ public class ChooseImage extends Group {
         b4.setOnAction(e -> Main.scene.setRoot(new Siatka()));
 
         b5.setOnAction(e -> Main.scene.setRoot(new Siatka()));
+
 
 
         Button b = new Button("Go to menu");

@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import static Old.ChooseImage.number;
+
 public class Siatka extends Group {
 
     public Siatka() {
@@ -32,6 +34,7 @@ public class Siatka extends Group {
         b1.setLayoutX(150);
         b1.setLayoutY(177);
         getChildren().add(b1);
+
         b1.setOnAction(e -> Main.scene.setRoot(new NewGame(spinner.getValue())));
 
         Button b = new Button("Go to menu");
