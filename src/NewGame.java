@@ -4,9 +4,16 @@ import javafx.scene.control.TextInputDialog;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+
+import java.awt.font.FontRenderContext;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class NewGame extends Group {
+    public static List<Score> scores = new LinkedList<>();
+    public static int points = 0;
+
     public NewGame(){
         Button b = new Button("Go to menu");
 
@@ -66,7 +73,20 @@ public class NewGame extends Group {
         TextInputDialog td = new TextInputDialog("enter your name");
         td.setHeaderText("! ! !   YOU WON   ! ! !");
         td.showAndWait();
-        System.out.println(td.getEditor().getText());
+        String name = td.getEditor().getText();
+        addScore(name);
         Main.scene.setRoot(new Menu());
+        Saving.save();
+    }
+    public static void addPoints(){
+        points++;
+        if(points>=8) win();
+    }
+    public static void addScore(String name){
+        for (int i = 0; i < scores.size(); i++) {
+            if(scores.get(i).score < points)
+                scores.add(i, new Score(name, points));
+        }
+        scores.add(new Score(name, points));;
     }
 }

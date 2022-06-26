@@ -15,7 +15,6 @@ public class Card extends Button {
     Image image;
     public static List<Card> cards = new ArrayList<>();
     public static Card oldSelected = null;
-    public static int points = 0;
 
     FadeTransition fade;
 
@@ -32,6 +31,7 @@ public class Card extends Button {
 
         view.setOpacity(0);
         setGraphic(view);
+
         //region fade out
         fade = new FadeTransition();
         fade.setDuration(Duration.seconds(1));
@@ -48,16 +48,13 @@ public class Card extends Button {
                 oldSelected = null;
             }
             else {
-                //setGraphic(view);
                 view.setOpacity(1);
                 if(oldSelected == null) oldSelected = this;
                 else {
                     if(oldSelected.id == id){
-                        points++;
+                        NewGame.addPoints();
                         setDisable(true);
                         oldSelected.setDisable(true);
-
-                        if(points >= 1) NewGame.win();
                     }
                     else {
                         fade.playFromStart();

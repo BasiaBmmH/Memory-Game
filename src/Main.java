@@ -9,6 +9,7 @@ public class Main extends Application {
     public static Scene scene;
 
     public static void main(String[] args) {
+        Saving.load();
         launch(args);
     }
     @Override
