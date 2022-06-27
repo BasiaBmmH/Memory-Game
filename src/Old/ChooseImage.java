@@ -2,6 +2,7 @@ package Old;
 
 import javafx.scene.Group;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -14,9 +15,9 @@ public class ChooseImage extends Group {
 
         Text text = new Text();
         text.setText(" Choose wisely:");
-        text.setX(100);
-        text.setY(22);
-        text.setFont(Font.font("Verdana", 25));
+        text.setX(120);
+        text.setY(30);
+        text.setFont(Font.font("Verdana", 30));
         text.setFill(Color.AQUAMARINE);
 
         getChildren().add(text);
@@ -27,20 +28,21 @@ public class ChooseImage extends Group {
         Button b4 = new Button("Cats");
         Button b5 = new Button("Dazai");
 
+
         b1.setLayoutX(260);
-        b1.setLayoutY(235);
+        b1.setLayoutY(130);
 
         b2.setLayoutX(260);
-        b2.setLayoutY(265);
+        b2.setLayoutY(160);
 
         b3.setLayoutX(260);
-        b3.setLayoutY(295);
+        b3.setLayoutY(190);
 
         b4.setLayoutX(260);
-        b4.setLayoutY(325);
+        b4.setLayoutY(220);
 
         b5.setLayoutX(260);
-        b5.setLayoutY(355);
+        b5.setLayoutY(250);
 
 
         getChildren().add(b1);
@@ -49,17 +51,33 @@ public class ChooseImage extends Group {
         getChildren().add(b4);
         getChildren().add(b5);
 
+        Image image;
+        int i = 0;
 
-        b1.setOnAction(e -> Main.scene.setRoot(new Siatka()));
+        b1.setOnAction((e) -> {
+            Main.scene.setRoot(new Siatka());
+            Card.image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
+        });
 
-        b2.setOnAction(e -> Main.scene.setRoot(new Siatka()));
+        b2.setOnAction((e) -> {
+            Main.scene.setRoot(new Siatka());
+            Card.image = new Image("Images\\PrinceOfPercia\\pop" + i + ".jpg");
+        });
 
-        b3.setOnAction(e -> Main.scene.setRoot(new Siatka()));
+        b3.setOnAction((e) -> {
+            Main.scene.setRoot(new Siatka());
+            Card.image = new Image("Images\\Assassin\\as" + i + ".jpg");
+        });
 
-        b4.setOnAction(e -> Main.scene.setRoot(new Siatka()));
+        b4.setOnAction((e) -> {
+            Main.scene.setRoot(new Siatka());
+            Card.image = new Image("Images\\Cats\\cf" + i + ".jpg");
+        });
 
-        b5.setOnAction(e -> Main.scene.setRoot(new Siatka()));
-
+        b5.setOnAction((e) -> {
+            Main.scene.setRoot(new Siatka());
+            Card.image = new Image("Images\\Daz\\Daz" + i + ".jpg");
+        });
 
 
         Button b = new Button("Go to menu");
