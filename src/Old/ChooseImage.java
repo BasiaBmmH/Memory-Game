@@ -23,7 +23,7 @@ public class ChooseImage extends Group {
         getChildren().add(text);
 
         Button b1 = new Button("Lord of the Rings");
-        Button b2 = new Button("Prince of Percia 2008");
+        Button b2 = new Button("Prince of Persia 2008");
         Button b3 = new Button("Assassin creed");
         Button b4 = new Button("Cats");
         Button b5 = new Button("Dazai");
@@ -55,28 +55,28 @@ public class ChooseImage extends Group {
         int i = 0;
 
         b1.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
+            Main.scene.setRoot(new Siatka());
         });
 
         b2.setOnAction((e) -> {
+            Card.image = new Image("Images\\PrinceOfPercia\\pop" + i + ".png");
             Main.scene.setRoot(new Siatka());
-            Card.image = new Image("Images\\PrinceOfPercia\\pop" + i + ".jpg");
         });
 
         b3.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.image = new Image("Images\\Assassin\\as" + i + ".jpg");
+            Main.scene.setRoot(new Siatka());
         });
 
         b4.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.image = new Image("Images\\Cats\\cf" + i + ".jpg");
+            Main.scene.setRoot(new Siatka());
         });
 
         b5.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.image = new Image("Images\\Daz\\Daz" + i + ".jpg");
+            Main.scene.setRoot(new Siatka());
         });
 
 
