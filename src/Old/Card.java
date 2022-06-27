@@ -11,9 +11,10 @@ import java.util.List;
 
 
 public class Card extends Button {
-    static int id;
+    int id;
     boolean isSelected = false;
-    static Image image;
+    Image image;
+    static String path;
     public static List<Card> cards = new ArrayList<>();
     public static Card oldSelected = null;
 
@@ -23,7 +24,7 @@ public class Card extends Button {
         super();
         id = i;
 
-        //image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
+        image = new Image("Images\\" + path + i + ".jpg");
         ImageView view = new ImageView(image);
         view.setFitHeight(70);
         view.setFitWidth(70);
@@ -51,7 +52,7 @@ public class Card extends Button {
                 view.setOpacity(1);
                 if (oldSelected == null) oldSelected = this;
                 else {
-                    if (oldSelected.id == id) {
+                    if (id == id) {
                         NewGame.addPoints();
                         setDisable(true);
                         oldSelected.setDisable(true);

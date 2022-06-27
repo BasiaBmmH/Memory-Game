@@ -8,8 +8,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-import static Old.ChooseImage.number;
-
 public class Siatka extends Group {
 
     public Siatka() {

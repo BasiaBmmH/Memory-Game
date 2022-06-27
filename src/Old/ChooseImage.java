@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 
 public class ChooseImage extends Group {
 
-    public static int number;
+    public int number;
 
     public ChooseImage() {
 
@@ -53,27 +53,27 @@ public class ChooseImage extends Group {
 
 
         b1.setOnAction((e) -> {
-            Card.image = new Image("Images/LOTR/lotr" + Card.id + ".jpg");
+            Card.path="LOTR\\lotr";
             Main.scene.setRoot(new Siatka());
         });
 
         b2.setOnAction((e) -> {
-            Card.image = new Image("Images/PrinceOfPercia/pop" + Card.id + ".jpg");
+            Card.path="PrinceOfPercia\\pop";
             Main.scene.setRoot(new Siatka());
         });
 
         b3.setOnAction((e) -> {
-            Card.image = new Image("Images/Assassin/as" + ".jpg");
+          Card.path="Assassin\\as";
             Main.scene.setRoot(new Siatka());
         });
 
         b4.setOnAction((e) -> {
-            Card.image = new Image("Images/Cats/cf" + Card.id + ".jpg");
+           Card.path="Images\\Cats\\cf";
             Main.scene.setRoot(new Siatka());
         });
 
         b5.setOnAction((e) -> {
-            Card.image = new Image("Images/Daz/Daz" + Card.id + ".jpg");
+          Card.path="Images\\Daz\\Daz";
             Main.scene.setRoot(new Siatka());
         });
 
