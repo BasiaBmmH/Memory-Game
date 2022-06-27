@@ -51,31 +51,29 @@ public class ChooseImage extends Group {
         getChildren().add(b4);
         getChildren().add(b5);
 
-        Image image;
-        int i = 0;
 
         b1.setOnAction((e) -> {
-            Card.image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
+            Card.image = new Image("Images/LOTR/lotr" + Card.id + ".jpg");
             Main.scene.setRoot(new Siatka());
         });
 
         b2.setOnAction((e) -> {
-            Card.image = new Image("Images\\PrinceOfPercia\\pop" + i + ".png");
+            Card.image = new Image("Images/PrinceOfPercia/pop" + Card.id + ".jpg");
             Main.scene.setRoot(new Siatka());
         });
 
         b3.setOnAction((e) -> {
-            Card.image = new Image("Images\\Assassin\\as" + i + ".jpg");
+            Card.image = new Image("Images/Assassin/as" + ".jpg");
             Main.scene.setRoot(new Siatka());
         });
 
         b4.setOnAction((e) -> {
-            Card.image = new Image("Images\\Cats\\cf" + i + ".jpg");
+            Card.image = new Image("Images/Cats/cf" + Card.id + ".jpg");
             Main.scene.setRoot(new Siatka());
         });
 
         b5.setOnAction((e) -> {
-            Card.image = new Image("Images\\Daz\\Daz" + i + ".jpg");
+            Card.image = new Image("Images/Daz/Daz" + Card.id + ".jpg");
             Main.scene.setRoot(new Siatka());
         });
 

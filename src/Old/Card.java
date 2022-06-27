@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class Card extends Button {
-    int id;
+    static int id;
     boolean isSelected = false;
     static Image image;
     public static List<Card> cards = new ArrayList<>();
