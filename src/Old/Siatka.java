@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import static Old.ChooseImage.number;
+
 public class Siatka extends Group {
 
     public Siatka() {
@@ -21,7 +23,7 @@ public class Siatka extends Group {
 
         getChildren().add(text);
 
-        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 8, 0, 2);
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 6, 0, 2);
         Spinner<Integer> spinner = new Spinner<>();
         spinner.setLayoutX(150);
         spinner.setLayoutY(150);

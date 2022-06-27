@@ -12,24 +12,23 @@ import java.util.List;
 
 public class Card extends Button {
     int id;
-    boolean isSelected = false;
+    boolean isSelected =false;
     Image image;
-    static String path;
     public static List<Card> cards = new ArrayList<>();
     public static Card oldSelected = null;
 
     FadeTransition fade;
 
-    public Card(int i) {
+    public Card(int i){
         super();
         id = i;
 
-        image = new Image("Images\\" + path + i + ".jpg");
+        image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
         ImageView view = new ImageView(image);
         view.setFitHeight(70);
         view.setFitWidth(70);
 
-        setPrefSize(90, 90);
+        setPrefSize(90,90);
 
         view.setOpacity(0);
         setGraphic(view);
@@ -43,20 +42,22 @@ public class Card extends Button {
         //endregion
 
 
-        setOnAction(e -> {
+        setOnAction(e->{
             fade.pause();
-            if (isSelected) {
+            if(isSelected) {
                 view.setOpacity(0);
                 oldSelected = null;
-            } else {
+            }
+            else {
                 view.setOpacity(1);
-                if (oldSelected == null) oldSelected = this;
+                if(oldSelected == null) oldSelected = this;
                 else {
-                    if (id == id) {
+                    if(oldSelected.id == id){
                         NewGame.addPoints();
                         setDisable(true);
                         oldSelected.setDisable(true);
-                    } else {
+                    }
+                    else {
                         fade.playFromStart();
                         oldSelected.fade.playFromStart();
                         isSelected = !isSelected;

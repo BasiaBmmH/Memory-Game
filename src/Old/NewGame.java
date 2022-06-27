@@ -1,9 +1,5 @@
-package Old;//
+package Old;
 
-
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextInputDialog;
@@ -14,6 +10,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+
 public class NewGame extends Group {
     public static List<Score> scores = new LinkedList<>();
     public static int points = 0;
@@ -21,14 +22,17 @@ public class NewGame extends Group {
     private static int size;
     private static int time = 0;
 
-    public NewGame(Integer value) {
+    public NewGame(int size) {
+        this.size = size;
         Button b = new Button("Go to menu");
+
         b.setLayoutX(0);
         b.setLayoutY(0);
 
         b.setOnAction(e -> Main.scene.setRoot(new Menu()));
 
         getChildren().add(b);
+
 
         Text text = new Text();
         text.setText("Time: 0s");
@@ -42,7 +46,7 @@ public class NewGame extends Group {
         Thread contTime = new Thread(() -> {
             while (!Thread.interrupted()) {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     return;
                 }
@@ -51,14 +55,13 @@ public class NewGame extends Group {
         });
         contTime.start();
 
+
         Card.cards.clear();
+        for (int i = 0; i < size * size / 2; i++) {
 
-
-        for(int i = 0; i < 8; ++i) {
             Card.cards.add(new Card(i));
             Card.cards.add(new Card(i));
         }
-
         Collections.shuffle(Card.cards);
 
 
@@ -77,7 +80,6 @@ public class NewGame extends Group {
                 Main.scene.setRoot(new Menu());
             }
         });
-
     }
 
     public static void win() {
@@ -98,11 +100,6 @@ public class NewGame extends Group {
     }
 
     public static void addScore(String name) {
-        for(int i = 0; i < scores.size(); ++i) {
-            if (((Score)scores.get(i)).score < points) {
-                scores.add(i, new Score(name, points));
-            }
-        }
 
         scores.add(new Score(name, points));
     }
