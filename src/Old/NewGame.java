@@ -46,7 +46,7 @@ public class NewGame extends Group {
         Thread contTime = new Thread(() -> {
             while (!Thread.interrupted()) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     return;
                 }
