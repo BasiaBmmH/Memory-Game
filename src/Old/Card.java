@@ -13,6 +13,7 @@ import java.util.List;
 public class Card extends Button {
     int id;
     boolean isSelected =false;
+    static String path;
     Image image;
     public static List<Card> cards = new ArrayList<>();
     public static Card oldSelected = null;
@@ -23,7 +24,7 @@ public class Card extends Button {
         super();
         id = i;
 
-        image = new Image("Images\\LOTR\\lotr" + i + ".jpg");
+        image = new Image("Images\\" + path + i + ".jpg");
         ImageView view = new ImageView(image);
         view.setFitHeight(70);
         view.setFitWidth(70);
