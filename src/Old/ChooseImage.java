@@ -14,8 +14,8 @@ public class ChooseImage extends Group {
 
         Text text = new Text();
         text.setText(" Choose wisely:");
-        text.setX(100);
-        text.setY(22);
+        text.setX(120);
+        text.setY(25);
         text.setFont(Font.font("Verdana", 25));
         text.setFill(Color.AQUAMARINE);
 
@@ -28,19 +28,19 @@ public class ChooseImage extends Group {
         Button b5 = new Button("Dazai");
 
         b1.setLayoutX(260);
-        b1.setLayoutY(235);
+        b1.setLayoutY(150);
 
         b2.setLayoutX(260);
-        b2.setLayoutY(265);
+        b2.setLayoutY(180);
 
         b3.setLayoutX(260);
-        b3.setLayoutY(295);
+        b3.setLayoutY(210);
 
         b4.setLayoutX(260);
-        b4.setLayoutY(325);
+        b4.setLayoutY(240);
 
         b5.setLayoutX(260);
-        b5.setLayoutY(355);
+        b5.setLayoutY(270);
 
 
         getChildren().add(b1);
@@ -51,28 +51,29 @@ public class ChooseImage extends Group {
 
 
         b1.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.path="LOTR\\lotr";
+            Main.scene.setRoot(new Siatka());
         });
 
         b2.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.path="PrinceOfPercia\\pop";
+            Main.scene.setRoot(new Siatka());
         });
 
         b3.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.path="Assassin\\as";
+            Main.scene.setRoot(new Siatka());
         });
 
         b4.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.path="Cats\\cf";
+            Main.scene.setRoot(new Siatka());
+
         });
 
         b5.setOnAction((e) -> {
-            Main.scene.setRoot(new Siatka());
             Card.path="Daz\\Daz";
+            Main.scene.setRoot(new Siatka());
         });
 
 
