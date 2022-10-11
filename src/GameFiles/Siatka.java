@@ -1,4 +1,4 @@
-package Old;
+package GameFiles;
 
 import javafx.scene.Group;
 import javafx.scene.control.Button;
@@ -7,8 +7,6 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-
-import static Old.ChooseImage.number;
 
 public class Siatka extends Group {
 

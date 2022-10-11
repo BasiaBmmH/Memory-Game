@@ -1,4 +1,4 @@
-package Old;
+package GameFiles;
 
 import javafx.animation.FadeTransition;
 import javafx.scene.control.Button;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Card extends Button {
     int id;
-    boolean isSelected =false;
+    boolean isSelected = false;
     static String path;
     Image image;
     public static List<Card> cards = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Card extends Button {
 
     FadeTransition fade;
 
-    public Card(int i){
+    public Card(int i) {
         super();
         id = i;
 
@@ -29,7 +29,7 @@ public class Card extends Button {
         view.setFitHeight(70);
         view.setFitWidth(70);
 
-        setPrefSize(90,90);
+        setPrefSize(90, 90);
 
         view.setOpacity(0);
         setGraphic(view);
@@ -43,22 +43,20 @@ public class Card extends Button {
         //endregion
 
 
-        setOnAction(e->{
+        setOnAction(e -> {
             fade.pause();
-            if(isSelected) {
+            if (isSelected) {
                 view.setOpacity(0);
                 oldSelected = null;
-            }
-            else {
+            } else {
                 view.setOpacity(1);
-                if(oldSelected == null) oldSelected = this;
+                if (oldSelected == null) oldSelected = this;
                 else {
-                    if(oldSelected.id == id){
+                    if (oldSelected.id == id) {
                         NewGame.addPoints();
                         setDisable(true);
                         oldSelected.setDisable(true);
-                    }
-                    else {
+                    } else {
                         fade.playFromStart();
                         oldSelected.fade.playFromStart();
                         isSelected = !isSelected;

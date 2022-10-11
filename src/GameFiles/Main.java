@@ -1,4 +1,4 @@
-package Old;
+package GameFiles;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -14,6 +14,7 @@ public class Main extends Application {
         Saving.load();
         launch(args);
     }
+
     @Override
     public void start(Stage stage) {
 
@@ -22,7 +23,7 @@ public class Main extends Application {
         stage.getIcons().setAll(new Image("Images\\Daz\\Daz1.jpg"));
         stage.setTitle("Memory");
 
-        scene =  new Scene(root, 500, 500);
+        scene = new Scene(root, 500, 500);
         scene.setFill(Color.BURLYWOOD);
         stage.setScene(scene);
         stage.show();

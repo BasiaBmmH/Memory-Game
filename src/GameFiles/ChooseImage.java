@@ -1,4 +1,4 @@
-package Old;
+package GameFiles;
 
 import javafx.scene.Group;
 import javafx.scene.control.Button;
@@ -51,31 +51,30 @@ public class ChooseImage extends Group {
 
 
         b1.setOnAction((e) -> {
-            Card.path="LOTR\\lotr";
+            Card.path = "LOTR\\lotr";
             Main.scene.setRoot(new Siatka());
         });
 
         b2.setOnAction((e) -> {
-            Card.path="PrinceOfPercia\\pop";
+            Card.path = "PrinceOfPercia\\pop";
             Main.scene.setRoot(new Siatka());
         });
 
         b3.setOnAction((e) -> {
-            Card.path="Assassin\\as";
+            Card.path = "Assassin\\as";
             Main.scene.setRoot(new Siatka());
         });
 
         b4.setOnAction((e) -> {
-            Card.path="Cats\\cf";
+            Card.path = "Cats\\cf";
             Main.scene.setRoot(new Siatka());
 
         });
 
         b5.setOnAction((e) -> {
-            Card.path="Daz\\Daz";
+            Card.path = "Daz\\Daz";
             Main.scene.setRoot(new Siatka());
         });
-
 
 
         Button b = new Button("Go to menu");

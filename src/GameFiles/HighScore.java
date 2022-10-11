@@ -1,4 +1,4 @@
-package Old;
+package GameFiles;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,15 +24,15 @@ public class HighScore extends GridPane {
         for (Score s : NewGame.scores) ss.add(s.name + " " + s.score);
 
         ListView<String> list = new ListView<String>();
-        ObservableList<String> items = FXCollections.observableArrayList (ss);
+        ObservableList<String> items = FXCollections.observableArrayList(ss);
         list.setItems(items);
 
-        add(list,0,0);
+        add(list, 0, 0);
 
         Button b = new Button("Menu");
         setHalignment(b, HPos.CENTER);
-        add(b,0,1);
+        add(b, 0, 1);
 
-        b.setOnAction(e-> Main.scene.setRoot(new Menu()));
+        b.setOnAction(e -> Main.scene.setRoot(new Menu()));
     }
 }
